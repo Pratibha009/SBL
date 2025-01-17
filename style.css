@@ -28,7 +28,7 @@ nav {
 
 .hero-img {
     width: 100%;
-    height: 800px;
+    height: 500px;
     /* background-image: url(https://otfs.b-cdn.net/wp-content/uploads/2021/12/freight.jpg); */
     /* background-image: url(https://img.freepik.com/premium-photo/large-blue-semi-truck-is-parked-shipping-yard-truck-is-surrounded-by-shipping-containers-sun-is-setting-background_14117-293488.jpg); */
     background-image: url(LOGISTIC.jpeg);
@@ -95,6 +95,7 @@ nav {
         /* padding: 80px 30px; */
     }
 
+   
 
     
 
@@ -156,11 +157,12 @@ nav {
         position: relative;
         opacity: .7;
     }
-    @media(max-width:450px){
+
+    /* @media(max-width:450px){
         .benefits{
-            /* background-attachment: scroll; */
+            background-attachment: scroll;
         }
-    }
+    } */
 
     #p {
         font-size: 50px;
@@ -289,24 +291,53 @@ nav {
             
         }
     }
+
+
+    @media(min-width:770px) and(max-width:1200px){
+        .sections{
+            flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center items */
+        height: 100%;
+        width: 100%;
+        }
+
+        .section-2{
+            flex-direction: column; /* Stack cards vertically on small screens */
+            align-items: center; 
+        }
+    }
+
+
+
     footer{
         background-color: #36454F;
         /* background-color: #818589; */
         display: flex;
-        justify-content: space-around;
+        /* justify-content: space-around; */
         height: 500px;
+        width: 100%;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        height: auto;
         width: 100%;
     }
 
     .foot{
         color: #f6f6f6;
         font-size: 20px;
+        /* display: inline; */
         /* padding: 50px 0; */
     }
 
     #f-l{
         padding: 50px 0 20px;
 
+    }
+
+    #f-img{
+        padding: 50px 0 0;
     }
     #quick{
         display: flex;
@@ -495,9 +526,10 @@ nav {
 
 @media (max-width: 768px) {
     .sections {
-        flex-direction: column; /* Stack cards vertically on small screens */
-        align-items: center; /* Center items */
+        flex-direction: column; 
+        align-items: center;/*Center items  */
         height: 100%;
+        width: 100%;
         
     }
 
@@ -506,10 +538,91 @@ nav {
         width: 100px;
     }
     .section1{
-        margin: 10px;
+        margin: 10px 0;
     }
 
     #quick{
         font-size: 16px;
     }
+    .foot{
+        display: block;
+    }
 }
+
+@media (min-width:300px) and (max-width:650px){
+
+    .hero-p2{
+        font-size: 24px;
+        position: absolute;
+        top: 300px;
+        height: 0;
+
+    }
+    .sections{
+        width: 100%;
+        padding: 0;
+    }
+    .section1{
+        width: 100%;
+    }
+    .image img{
+        width: 100%;
+    }
+    .cards{
+        padding: 10px;
+    }
+
+    #quick{
+        font-size: 14px;
+    }
+
+    footer{
+        display: block;
+    }
+   
+    #f-l{
+        padding: 20px 0 20px;
+        margin: 0 10px;
+
+    }
+     .foot img{
+        height: 80px;
+        width: 200px;
+    }
+   
+
+}
+
+@media(min-width:450px) and (max-width:1500px){
+    .hero-img{
+        height: 500px;
+        width: 100%;
+    }
+
+    .sections {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        justify-content: center; /* Center the cards */
+        height: 100%;
+        width: 100%;
+       padding: 0;
+        
+    }
+    .section1{
+        margin: 5px;
+    }
+
+    .section-2{
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        justify-content: center; /* Center the cards */
+        height: 100%;
+        width: 100%;
+       padding: 0;
+    }
+
+}
+
+
+
+
